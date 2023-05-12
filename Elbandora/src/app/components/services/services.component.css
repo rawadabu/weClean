@@ -1,9 +1,14 @@
 /* FEATURES */
 .features {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin: 0 12rem;
+  grid-template-columns: 1fr 1fr; /* Two columns: one for feature boxes, one for the image box */
+  gap: 2rem;
+  margin: 0 10rem;
+}
+
+.features__image-box {
+  grid-column: 2 / 3;
+  grid-row: 1 / span 4;
 }
 
 .features__img {
@@ -11,17 +16,27 @@
 }
 
 .features__feature {
+  grid-column: 1; /* Place feature boxes in the first column */
   align-self: center;
   justify-self: center;
   width: 70%;
   font-size: 1.5rem;
+  padding: 2rem; /* Add padding */
+  border-radius: 0.5rem; /* Add border-radius */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+  background-color: #ffffff; /* Add background color */
+  transition: transform 0.3s; /* Add transition for smooth scaling animation */
+}
+
+.features__feature:hover {
+  transform: scale(1.05); /* Add hover effect to scale the card */
 }
 
 .features__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary-opacity);
+  background-color: var(--color-primary);
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 50%;
