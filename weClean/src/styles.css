@@ -7,9 +7,9 @@
   --color-primary-darker: #019aff;
   --color-secondary-darker: #0d1fff;
   --color-tertiary-darker: #0c56e8;
-  --color-primary-opacity: #5ec5763a;
-  --color-secondary-opacity: #ffcd0331;
-  --color-tertiary-opacity: #ff58602d;
+  --color-primary-opacity: #0099ff;
+  --color-secondary-opacity: #00ccff;
+  --color-tertiary-opacity: #0db6ff;
   --gradient-primary: linear-gradient(to top left, #0ccae8, #0c56e8);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
