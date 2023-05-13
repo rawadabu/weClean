@@ -2,15 +2,15 @@
 /* Define custom properties (CSS variables) for colors and gradients */
 :root {
   --color-primary: #4571f7;
-  --color-secondary: #ffcb03;
-  --color-tertiary: #ff585f;
-  --color-primary-darker: #0f03f5;
-  --color-secondary-darker: #ffbb00;
-  --color-tertiary-darker: #fd424b;
+  --color-secondary: #019aff;
+  --color-tertiary: #0ccae8;
+  --color-primary-darker: #019aff;
+  --color-secondary-darker: #0d1fff;
+  --color-tertiary-darker: #0c56e8;
   --color-primary-opacity: #5ec5763a;
   --color-secondary-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
-  --gradient-primary: linear-gradient(to top left, #aab6f0, #4571f7);
+  --gradient-primary: linear-gradient(to top left, #0ccae8, #0c56e8);
   --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
