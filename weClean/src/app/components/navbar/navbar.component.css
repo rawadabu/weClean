@@ -14,6 +14,10 @@
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
+a {
+  color: #fff;
+}
+
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
@@ -50,7 +54,7 @@
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
   background-color: var(--color-primary);
-  color: #222;
+  color: #fff;
 }
 
 .nav__link--btn:hover,
