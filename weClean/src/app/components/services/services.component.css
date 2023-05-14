@@ -9,10 +9,15 @@
 .features__image-box {
   grid-column: 2 / 3;
   grid-row: 1 / span 4;
+  display: flex;
 }
 
 .features__img {
   width: 100%;
+}
+
+img:hover {
+  transform: scale(1.05); /* Add hover effect to scale the card */
 }
 
 .features__feature {
@@ -36,17 +41,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-secondary-opacity);
+  /* background-color: var(--color-secondary-opacity); */
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
 
-.features__icon svg {
-  height: 2.5rem;
-  width: 2.5rem;
-  fill: var(--color-secondary-opacity);
+.features__icon img {
+  height: 4rem;
+  width: 4rem;
+  /* fill: var(--color-secondary-opacity); */
 }
 
 .features__header {

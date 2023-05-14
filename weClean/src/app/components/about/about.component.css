@@ -81,17 +81,17 @@ button {
   border-radius: 50%;
 }
 
-.operations__icon svg {
-  height: 2.75rem;
-  width: 2.75rem;
+.operations__icon img {
+  height: 4rem;
+  width: 4rem;
 }
 
 .operations__content p {
   grid-column: 2;
 }
 
-.operations__icon--1 {
-  background-color: var(--color-secondary-opacity);
+.operations__icon {
+  background-color: var(--color-primary-darker);
 }
 .operations__icon--2 {
   background-color: var(--color-primary-opacity);

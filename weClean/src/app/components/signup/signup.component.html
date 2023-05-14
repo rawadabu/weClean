@@ -1,6 +1,19 @@
 <section class="section" id="section--4">
   <div class="section__title">
     <h2 class="section__description">Contact us</h2>
-    <h3 class="section__header">SIGN UP!</h3>
+    <div class="contact-form-container">
+      <form action="submit_form.php" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   </div>
 </section>
