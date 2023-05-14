@@ -7,10 +7,12 @@ import { DescriptionComponent } from './components/description/description.compo
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
-import { SignupComponent } from './components/signup/signup.component';
+import { SignupComponent } from './components/contact/signup.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SignupModalComponent } from './components/signup-modal/signup-modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,9 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
+    SignupModalComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,38 @@
+<div class="modal" [class.hidden]="!isVisible">
+  <h2 class="modal__header">Sign up</h2>
+  <form class="modal__form" (submit)="onSubmit()">
+    <label for="id">ID</label>
+    <input type="text" id="id" [(ngModel)]="user.id" name="id" required />
+
+    <label for="firstName">First Name</label>
+    <input
+      type="text"
+      id="firstName"
+      [(ngModel)]="user.firstName"
+      name="firstName"
+      required
+    />
+
+    <label for="lastName">Last Name</label>
+    <input
+      type="text"
+      id="lastName"
+      [(ngModel)]="user.lastName"
+      name="lastName"
+      required
+    />
+
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="user.email"
+      name="email"
+      required
+    />
+
+    <button type="submit">Sign up</button>
+  </form>
+  <button class="btn--close-modal" (click)="isVisible = false">&times;</button>
+</div>
+<div class="overlay" [class.hidden]="!isVisible"></div>
