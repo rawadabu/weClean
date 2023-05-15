@@ -5,13 +5,18 @@
   align-items: center;
   height: 9rem;
   width: 100%;
-  padding: 0 6rem;
+  padding: 0 10rem;
   z-index: 100;
   position: sticky; /* To keep the navbar on screen when scrolling page up/down */
   top: 0;
   background-color: rgb(254, 254, 254);
   border-radius: 0 0 15px 15px; /* To round the bottom corners */
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav__name {
+  font-family: monospace;
+  font-size: 4rem;
 }
 
 a {
@@ -25,7 +30,7 @@ a {
 }
 
 .nav__logo {
-  height: 7rem;
+  height: 6rem;
   transition: all 0.3s;
 }
 
@@ -36,7 +41,7 @@ a {
 }
 
 .nav__item {
-  margin-left: 4rem;
+  margin-left: 6rem;
 }
 
 .nav__link:link,
