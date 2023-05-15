@@ -17,7 +17,8 @@
 }
 
 img:hover {
-  transform: scale(1.05); /* Add hover effect to scale the card */
+  transform: scale(1.08); /* Add hover effect to scale the card */
+  transition: transform 0.4s; /* Add transition for smooth scaling animation */
 }
 
 .features__feature {
@@ -30,11 +31,11 @@ img:hover {
   border-radius: 0.5rem; /* Add border-radius */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow */
   background-color: #ffffff; /* Add background color */
-  transition: transform 0.3s; /* Add transition for smooth scaling animation */
+  transition: transform 0.4s; /* Add transition for smooth scaling animation */
 }
 
 .features__feature:hover {
-  transform: scale(1.05); /* Add hover effect to scale the card */
+  transform: scale(1.08); /* Add hover effect to scale the card */
 }
 
 .features__icon {
