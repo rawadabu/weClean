@@ -90,7 +90,7 @@ button {
   grid-column: 2;
 }
 
-.operations__icon {
+/* .operations__icon {
   background-color: var(--color-primary-darker);
 }
 .operations__icon--2 {
@@ -107,4 +107,4 @@ button {
 }
 .operations__icon--3 svg {
   fill: var(--color-tertiary);
-}
+} */

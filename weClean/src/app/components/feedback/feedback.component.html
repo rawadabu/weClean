@@ -12,7 +12,7 @@
           {{ user.description }}
         </blockquote>
         <address class="testimonial__author">
-          <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+          <img [src]="user.profilePicture" alt="" class="testimonial__photo" />
           <h6 class="testimonial__firstName">{{ user.firstName }}</h6>
           <p class="testimonial__lastName">{{ user.lastName }}</p>
         </address>

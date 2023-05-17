@@ -6,6 +6,10 @@
   margin: 0 10rem;
 }
 
+section {
+  background-color: #ebebeb;
+}
+
 .features__image-box {
   grid-column: 2 / 3;
   grid-row: 1 / span 4;
