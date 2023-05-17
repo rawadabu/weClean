@@ -8,14 +8,13 @@
   <div class="slider">
     <div class="slide slide--1">
       <div class="testimonial">
-        <h5 class="testimonial__header">{{ user.description }}</h5>
         <blockquote class="testimonial__text">
           {{ user.description }}
         </blockquote>
         <address class="testimonial__author">
           <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
-          <h6 class="testimonial__name">{{ user.lastName }}</h6>
-          <p class="testimonial__location">San Francisco, USA</p>
+          <h6 class="testimonial__firstName">{{ user.firstName }}</h6>
+          <p class="testimonial__lastName">{{ user.lastName }}</p>
         </address>
       </div>
     </div>
@@ -65,6 +64,5 @@
         <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
     <button class="slider__btn slider__btn--left">&larr;</button>
     <button class="slider__btn slider__btn--right">&rarr;</button>
-    <div class="dots"></div>
   </div>
 </section>
