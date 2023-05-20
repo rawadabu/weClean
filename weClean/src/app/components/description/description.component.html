@@ -12,7 +12,13 @@
       a perfect blend of cleaner and refreshing that will have a impact on your
       health.
     </h4>
-    <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+    <button
+      class="btn--text btn--scroll-to"
+      [routerLink]="['/about']"
+      fragment="section--1"
+    >
+      Learn more &DownArrow;
+    </button>
     <img
       src="assets/cleaning-services.png"
       class="header__img"
