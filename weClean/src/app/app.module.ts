@@ -9,7 +9,6 @@ import { ServicesComponent } from './components/services/services.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { contactusComponent } from './components/contact-us/contact-us.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignupModalComponent } from './components/signup-modal/signup-modal.component';
 import { FormsModule } from '@angular/forms';
@@ -23,7 +22,6 @@ import { FormsModule } from '@angular/forms';
     FeedbackComponent,
     contactusComponent,
     NavbarComponent,
-    HeaderComponent,
     FooterComponent,
     SignupModalComponent,
   ],
