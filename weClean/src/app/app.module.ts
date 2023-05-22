@@ -12,6 +12,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignupModalComponent } from './components/signup-modal/signup-modal.component';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/enviroments/enviroment';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,11 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+<<<<<<< HEAD
     BrowserAnimationsModule,
+=======
+    AngularFireModule.initializeApp(environment.firebase),
+>>>>>>> a3046bd (Firebase)
   ],
   providers: [],
   bootstrap: [AppComponent],
