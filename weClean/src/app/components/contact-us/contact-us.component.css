@@ -41,6 +41,11 @@
   padding-bottom: 10px;
 }
 
+p:hover {
+  transform: scale(1.2);
+  transition: transform 0.4s; /* Add transition for smooth scaling animation */
+}
+
 .contact__content p {
   font-size: 1.2rem;
   color: #0c56e8;

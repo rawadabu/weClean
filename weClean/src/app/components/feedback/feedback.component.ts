@@ -6,9 +6,7 @@ import { User } from '../../models/user.model';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
   user: User = {
     id: '123123',
     firstName: 'Rawad',

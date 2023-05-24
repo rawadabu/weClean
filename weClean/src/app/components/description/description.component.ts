@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-description',
@@ -12,7 +12,5 @@ export class DescriptionComponent implements OnInit {
 
   //'srvElement' uses as an alias, to have it outside of that component.
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }
