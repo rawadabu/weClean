@@ -31,11 +31,8 @@ import { environment } from 'src/enviroments/enviroment';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-<<<<<<< HEAD
     BrowserAnimationsModule,
-=======
     AngularFireModule.initializeApp(environment.firebase),
->>>>>>> a3046bd (Firebase)
   ],
   providers: [],
   bootstrap: [AppComponent],
