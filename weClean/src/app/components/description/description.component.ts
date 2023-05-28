@@ -13,4 +13,12 @@ export class DescriptionComponent implements OnInit {
   //'srvElement' uses as an alias, to have it outside of that component.
 
   ngOnInit(): void {}
+
+  scrollToSection(sectionId: string): void {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
