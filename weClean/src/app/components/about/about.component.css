@@ -72,6 +72,15 @@ button {
   align-self: center;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
 .operations__icon {
   display: flex;
   align-items: center;
@@ -79,6 +88,7 @@ button {
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
+  animation: rotate 0.5s linear;
 }
 
 .operations__icon img {
