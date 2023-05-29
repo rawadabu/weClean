@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-description',
-  templateUrl: './description.component.html',
-  styleUrls: ['./description.component.css'],
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
 })
-export class DescriptionComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   @Input('srvElement') element: { type: string } | undefined;
   // Exposing this property to the world
   // So any other parent component hosting our server, is now able to bind the element.

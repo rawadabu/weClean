@@ -8,9 +8,9 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+  selector: 'app-HowItWorks',
+  templateUrl: './how-it-works.component.html',
+  styleUrls: ['./how-it-works.component.css'],
   animations: [
     trigger('fadeAnimation', [
       transition(':enter', [
@@ -21,7 +21,7 @@ import {
     ]),
   ],
 })
-export class AboutComponent implements OnInit {
+export class HowItWorks implements OnInit {
   ngOnInit(): void {}
 
   activeTab = 1; // Default is the first tab

@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DescriptionComponent } from './components/description/description.component';
-import { AboutComponent } from './components/about/about.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HowItWorks } from './components/how-it-works/how-it-works.component';
 import { ServicesComponent } from './components/services/services.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { contactusComponent } from './components/contact-us/contact-us.component';
@@ -18,8 +18,8 @@ import { environment } from 'src/enviroments/enviroment';
 @NgModule({
   declarations: [
     AppComponent,
-    DescriptionComponent,
-    AboutComponent,
+    HeaderComponent,
+    HowItWorks,
     ServicesComponent,
     FeedbackComponent,
     contactusComponent,
