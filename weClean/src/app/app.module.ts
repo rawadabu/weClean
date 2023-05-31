@@ -14,6 +14,7 @@ import { SignupModalComponent } from './components/signup-modal/signup-modal.com
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/enviroments/enviroment';
+import { SigninModalComponent } from './components/signin-modal/signin-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { environment } from 'src/enviroments/enviroment';
     NavbarComponent,
     FooterComponent,
     SignupModalComponent,
+    SigninModalComponent,
   ],
   imports: [
     BrowserModule,

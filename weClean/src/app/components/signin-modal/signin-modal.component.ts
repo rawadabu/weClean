@@ -1,31 +1,25 @@
 import {
   Component,
   ElementRef,
+  Input,
+  NgModule,
   OnInit,
   ViewChild,
-  Input,
-  Output,
-  EventEmitter,
 } from '@angular/core';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { User } from 'src/app/models/user.model';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { collection, addDoc } from 'firebase/firestore';
 import { db } from 'src/enviroments/enviroment';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-signup-modal',
-  templateUrl: './signup-modal.component.html',
-  styleUrls: ['./signup-modal.component.css'],
+  selector: 'app-signin-modal',
+  templateUrl: './signin-modal.component.html',
+  styleUrls: ['./signin-modal.component.css'],
 })
-export class SignupModalComponent implements OnInit {
+export class SigninModalComponent implements OnInit {
+  ngOnInit(): void {}
   @Input() isVisible = false;
   @Output() switchModal: EventEmitter<string> = new EventEmitter();
-
-  ngOnInit(): void {
-    // Add any initialization logic here
-  }
-  @ViewChild('modal', { static: false }) modal!: ElementRef<any>;
-  @ViewChild('overlay', { static: false }) overlay!: ElementRef<any>;
 
   user: User = {
     id: '',
@@ -34,6 +28,9 @@ export class SignupModalComponent implements OnInit {
     email: '',
     password: '',
   };
+
+  @ViewChild('modal', { static: false }) modal!: ElementRef<any>;
+  @ViewChild('overlay', { static: false }) overlay!: ElementRef<any>;
 
   openModal() {
     this.modal.nativeElement.classList.remove('hidden');
@@ -48,23 +45,13 @@ export class SignupModalComponent implements OnInit {
   onSubmit() {
     const auth = getAuth();
 
-    createUserWithEmailAndPassword(auth, this.user.email, 'password')
-      .then(async (userCredential) => {
-        // The user account was created successfully
+    signInWithEmailAndPassword(auth, this.user.email, 'password')
+      .then((userCredential) => {
+        // The user was authenticated successfully
         const user = userCredential.user;
 
         console.log('User:', user);
 
-        // Save the user data to Firestore
-        const usersCollection = collection(db, 'users');
-        const docRef = await addDoc(usersCollection, {
-          id: user.uid, // use the uid from the auth user as the document ID
-          firstName: this.user.firstName,
-          lastName: this.user.lastName,
-          email: this.user.email,
-        });
-
-        console.log('User saved to Firestore with ID:', docRef.id);
         // Close the modal
         this.closeModal();
       })
@@ -76,7 +63,6 @@ export class SignupModalComponent implements OnInit {
         alert(errorMessage);
       });
   }
-
   switchToSignIn() {
     this.isVisible = false;
     this.switchModal.emit('signin');

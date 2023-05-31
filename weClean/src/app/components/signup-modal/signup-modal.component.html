@@ -30,7 +30,10 @@
       name="email"
       required
     />
-
+    <p>
+      Already registered?
+      <button type="button" (click)="switchToSignIn()">Sign in!</button>
+    </p>
     <button type="submit">Sign up</button>
   </form>
   <button class="btn--close-modal" (click)="isVisible = false">&times;</button>

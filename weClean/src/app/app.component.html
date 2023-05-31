@@ -8,7 +8,7 @@
   rel="stylesheet"
 />
 
-<app-navbar></app-navbar>
+<app-navbar (openModal)="showSignUp()"></app-navbar>
 <app-header id="description"></app-header>
 <app-HowItWorks id="how-it-works"></app-HowItWorks>
 <app-services id="services"></app-services>
@@ -18,3 +18,12 @@
 <div class="to-top" (click)="scrollToTop()">
   <img src="../assets/to-top.png" alt="to-top-icon" />
 </div>
+<app-signup-modal
+  [isVisible]="isSignupVisible"
+  (switchModal)="handleSwitchModal($event)"
+></app-signup-modal>
+
+<app-signin-modal
+  [isVisible]="isSigninVisible"
+  (switchModal)="handleSwitchModal($event)"
+></app-signin-modal>

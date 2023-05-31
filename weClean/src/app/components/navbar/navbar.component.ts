@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +7,14 @@ import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   @Input() featureSelected = new EventEmitter<string>();
+  @Output() openModal: EventEmitter<void> = new EventEmitter();
 
   ngOnInit(): void {
     // Add any initialization logic here
   }
+
   public isModalVisible = false;
   toggleModal(): void {
-    this.isModalVisible = !this.isModalVisible;
+    this.openModal.emit();
   }
 }
