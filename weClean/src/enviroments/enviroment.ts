@@ -1,3 +1,6 @@
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+
 export const environment = {
   production: false,
 
@@ -11,3 +14,5 @@ export const environment = {
     measurementId: 'G-PTQV3FJDV9',
   },
 };
+export const app = initializeApp(environment.firebase);
+export const db = getFirestore(app);
