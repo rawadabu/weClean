@@ -10,7 +10,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 export class AppComponent implements OnInit {
   title = 'weClean';
   @Input() isVisible = false;
-  isLoggedIn = false;
+  @Input() isLoggedIn = false;
   isSignupVisible = false;
   isSigninVisible = false;
 

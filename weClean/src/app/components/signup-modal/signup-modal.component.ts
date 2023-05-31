@@ -28,7 +28,6 @@ export class SignupModalComponent implements OnInit {
   @ViewChild('overlay', { static: false }) overlay!: ElementRef<any>;
 
   user: User = {
-    id: '',
     firstName: '',
     lastName: '',
     email: '',

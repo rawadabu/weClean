@@ -13,7 +13,6 @@ export class FeedbackComponent implements OnInit {
     this.feedbackService.getFeedbacks();
   }
   user: User = {
-    id: '123123',
     firstName: 'Rawad',
     lastName: 'Abusaleh',
     email: 'rawad@gmail.com',

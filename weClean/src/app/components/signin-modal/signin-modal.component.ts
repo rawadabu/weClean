@@ -22,7 +22,6 @@ export class SigninModalComponent implements OnInit {
   @Output() switchModal: EventEmitter<string> = new EventEmitter();
 
   user: User = {
-    id: '',
     firstName: '',
     lastName: '',
     email: '',

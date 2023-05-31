@@ -1,9 +1,6 @@
 <div class="modal" [class.hidden]="!isVisible">
   <h2 class="modal__header">Sign up</h2>
   <form class="modal__form" (submit)="onSubmit()">
-    <label for="id">ID</label>
-    <input type="text" id="id" [(ngModel)]="user.id" name="id" required />
-
     <label for="firstName">First Name</label>
     <input
       type="text"
@@ -28,6 +25,15 @@
       id="email"
       [(ngModel)]="user.email"
       name="email"
+      required
+    />
+
+    <label for="password">Password</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="user.password"
+      name="password"
       required
     />
     <p>
