@@ -65,13 +65,32 @@ img:hover {
 
 .features__feature:hover {
   transform: scale(1.08); /* Add hover effect to scale the card */
+  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  border-color: #0974f1;
+}
+
+.features__feature .btn {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: #0974f1;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.features__feature .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #0974f1;
 }
 
 .features__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--color-secondary-opacity); */
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 50%;
@@ -81,10 +100,27 @@ img:hover {
 .features__icon img {
   height: 4rem;
   width: 4rem;
-  /* fill: var(--color-secondary-opacity); */
 }
 
 .features__header {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.features__feature .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #bed6fb;
+  border-radius: 99em 0 0 99em;
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  font-size: 1.5rem;
+}
+
+.features__feature .pricing small {
+  color: #707a91;
+  font-size: 1em;
+  margin-left: 0.25em;
 }
