@@ -8,13 +8,20 @@
   <div class="slider">
     <div class="slide">
       <div class="testimonial">
-        <blockquote class="testimonial__text">
-          {{ user.description }}
+        <blockquote
+          class="testimonial__text"
+          *ngFor="let feedback of feedbacks"
+        >
+          {{ feedback.description }}
         </blockquote>
         <address class="testimonial__author">
           <img [src]="user.profilePicture" alt="" class="testimonial__photo" />
-          <h6 class="testimonial__firstName">{{ user.firstName }}</h6>
-          <p class="testimonial__lastName">{{ user.lastName }}</p>
+          <h6 class="testimonial__firstName" *ngFor="let feedback of feedbacks">
+            {{ feedback.id }}
+          </h6>
+          <p class="testimonial__lastName" *ngFor="let feedback of feedbacks">
+            {{ feedback.userId }}
+          </p>
         </address>
       </div>
     </div>
