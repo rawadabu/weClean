@@ -33,7 +33,6 @@
 
 .contact__icon img:hover {
   transform: scale(1.1);
-
 }
 
 .contact__content h1 {
@@ -53,6 +52,6 @@ p:hover {
 }
 
 img:hover {
-  transform: scale(1.08); /* Add hover effect to scale the card */
-  transition: transform 0.4s; /* Add transition for smooth scaling animation */
+  transform: scale(1.08);
+  transition: transform 0.4s;
 }
