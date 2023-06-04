@@ -46,8 +46,8 @@ section {
 }
 
 img:hover {
-  transform: scale(1.08); /* Add hover effect to scale the card */
-  transition: transform 0.4s; /* Add transition for smooth scaling animation */
+  transform: scale(1.08);
+  transition: transform 0.4s;
 }
 
 .features__feature {
@@ -56,11 +56,11 @@ img:hover {
   justify-self: center;
   width: 70%;
   font-size: 1.5rem;
-  padding: 2rem; /* Add padding */
-  border-radius: 0.5rem; /* Add border-radius */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow */
-  background-color: #ffffff; /* Add background color */
-  transition: transform 0.4s; /* Add transition for smooth scaling animation */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.4s; /* for smooth scaling animation */
 }
 
 .features__feature:hover {
