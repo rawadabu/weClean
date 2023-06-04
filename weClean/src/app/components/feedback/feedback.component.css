@@ -3,7 +3,7 @@
   height: 50rem;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Hiding the rest of the array, shows only the appropriate index data. */
 }
 
 .slide {
@@ -14,12 +14,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* THIS creates the animation! */
+  /* creates the animation */
   transition: transform 1s;
 }
 
 .slide > img {
-  /* Only for images that have different size than slide */
+  /* for images that have different size than slide */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -29,12 +29,15 @@
   position: absolute;
   top: 60%;
   z-index: 10;
-
-  border: #333;
   font-family: inherit;
-  border-radius: 50%;
-  font-size: 3.25rem;
+  font-size: 2.5rem;
   cursor: pointer;
+  color: white;
+}
+
+.slider__btn:hover {
+  background-color: var(--color-primary-darker);
+  color: #fff;
 }
 
 .slider__btn--left {
@@ -54,7 +57,7 @@
 }
 
 .testimonial::before {
-  content: "\201C";
+  content: "\201C"; /* the left double quotation mark (“). */
   position: absolute;
   top: -2.7rem;
   left: -4.8rem;
@@ -93,8 +96,4 @@
 
 .testimonial__lastName {
   font-size: 1.5rem;
-}
-
-.section__title--testimonials {
-  margin-bottom: 4rem;
 }

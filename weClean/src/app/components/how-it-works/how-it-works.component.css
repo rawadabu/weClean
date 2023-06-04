@@ -22,6 +22,7 @@ button {
 .operations__tab {
   margin-right: 3rem;
   transform: translateY(-50%);
+  margin: 1rem;
 }
 
 .operations__tab span {
@@ -30,20 +31,7 @@ button {
   display: inline-block;
 }
 
-.operations__tab--1 {
-  background-color: var(--color-primary);
-}
-
-.operations__tab--1:hover {
-  background-color: var(--color-secondary);
-}
-
-.operations__tab--3 {
-  background-color: var(--color-primary);
-  margin: 0;
-}
-
-.operations__tab--3:hover {
+.operations__tab:hover {
   background-color: var(--color-secondary);
 }
 

@@ -69,23 +69,6 @@ h4 {
   background-image: var(--gradient-primary);
 }
 
-.btn {
-  display: inline-block;
-  background-color: var(--color-primary);
-  font-size: 1.6rem;
-  font-family: inherit;
-  font-weight: 500;
-  border: none;
-  padding: 1.25rem 4.5rem;
-  border-radius: 10rem;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--color-primary-darker);
-}
-
 .btn--text {
   display: inline-block;
   background: none;
@@ -100,11 +83,6 @@ h4 {
   transition: all 0.3s;
 }
 
-p {
-  color: #666;
-}
-
-/* This is BAD for accessibility! Don't do in the real world! */
 button:focus {
   outline: none;
 }
