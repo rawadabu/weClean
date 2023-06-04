@@ -29,4 +29,18 @@ export class FeedbackComponent implements OnInit {
   async loadFeedbacks(): Promise<void> {
     this.feedbacks = await this.feedbackService.getFeedbacks();
   }
+  // Implementing slider feature, moving over feedbacks array
+  currentSlide = 0;
+
+  nextSlide(): void {
+    if (this.currentSlide < this.feedbacks.length - 1) {
+      this.currentSlide++;
+    }
+  }
+
+  prevSlide(): void {
+    if (this.currentSlide > 0) {
+      this.currentSlide--;
+    }
+  }
 }

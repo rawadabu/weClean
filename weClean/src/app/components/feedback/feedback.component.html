@@ -6,26 +6,31 @@
     </h3>
   </div>
   <div class="slider">
-    <div class="slide">
+    <div
+      class="slide"
+      *ngFor="let feedback of feedbacks; let i = index"
+      [style.transform]="'translateX(' + (i - currentSlide) * 100 + '%)'"
+    >
       <div class="testimonial">
-        <blockquote
-          class="testimonial__text"
-          *ngFor="let feedback of feedbacks"
-        >
+        <blockquote class="testimonial__text">
           {{ feedback.description }}
         </blockquote>
         <address class="testimonial__author">
           <img [src]="user.profilePicture" alt="" class="testimonial__photo" />
-          <h6 class="testimonial__firstName" *ngFor="let feedback of feedbacks">
+          <h6 class="testimonial__firstName">
             {{ feedback.id }}
           </h6>
-          <p class="testimonial__lastName" *ngFor="let feedback of feedbacks">
+          <p class="testimonial__lastName">
             {{ feedback.userId }}
           </p>
         </address>
       </div>
     </div>
-    <button class="slider__btn slider__btn--left">&larr;</button>
-    <button class="slider__btn slider__btn--right">&rarr;</button>
+    <button class="slider__btn slider__btn--left" (click)="prevSlide()">
+      &larr;
+    </button>
+    <button class="slider__btn slider__btn--right" (click)="nextSlide()">
+      &rarr;
+    </button>
   </div>
 </section>
