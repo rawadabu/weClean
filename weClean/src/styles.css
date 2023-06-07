@@ -239,3 +239,16 @@ img {
   opacity: 0;
   display: none;
 }
+
+::placeholder {
+  color: #888;
+  opacity: 1; /* Firefox requires this to make the placeholder visible */
+  font-size: 16px;
+  font-style: italic;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+input:focus::placeholder {
+  color: #555; /* darker color when the input is focused */
+  font-size: 14px; /* smaller font-size when the input is focused */
+}
