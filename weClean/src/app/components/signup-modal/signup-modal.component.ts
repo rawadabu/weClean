@@ -64,6 +64,14 @@ export class SignupModalComponent implements OnInit {
         });
 
         console.log('User saved to Firestore with ID:', docRef.id);
+        // Reset the form
+        this.user = {
+          firstName: '',
+          lastName: '',
+          email: '',
+          password: '',
+        };
+
         // Close the modal
         this.closeModal();
       })

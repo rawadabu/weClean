@@ -51,6 +51,14 @@ export class SigninModalComponent implements OnInit {
 
         console.log('User:', user);
 
+        // Reset the form
+        this.user = {
+          firstName: '',
+          lastName: '',
+          email: '',
+          password: '',
+        };
+
         // Close the modal
         this.closeModal();
       })
