@@ -20,13 +20,33 @@
     <li class="nav__item">
       <a class="nav__link" href="#contact">Contact</a>
     </li>
-    <li class="nav__item">
+    <li class="nav__item" *ngIf="!isLoggedIn">
       <a
         class="nav__link nav__link--btn btn--show-modal"
         href="#"
         (click)="toggleModal()"
-        >Open account</a
       >
+        Open account
+      </a>
+    </li>
+    <!-- When user is logged in -->
+    <li class="nav__item" *ngIf="isLoggedIn">
+      <a
+        class="nav__link nav__link--btn btn--show-modal"
+        href="#"
+        (click)="toggleModal()"
+      >
+        Add Feedback
+      </a>
+    </li>
+    <li class="nav__item" *ngIf="isLoggedIn">
+      <a
+        class="nav__link nav__link--btn btn--show-modal"
+        href="#"
+        (click)="logOff()"
+      >
+        Log Off
+      </a>
     </li>
   </ul>
 </nav>
