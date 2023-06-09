@@ -25,9 +25,10 @@ Not finished yet.
 <img width="1435" alt="Screenshot 2023-06-01 at 13 17 34" src="https://github.com/rawadabu/weClean/assets/73743660/717d8b29-589c-4f6d-b5f4-d95459752cf9">
 
 ## ![image](https://github.com/rawadabu/weClean/assets/73743660/4f105406-bcb1-4272-b1c3-52244b624d05) Sign Up
-<img width="1431" alt="Screenshot 2023-06-01 at 13 17 41" src="https://github.com/rawadabu/weClean/assets/73743660/ca952ae2-f43f-439b-8ea1-1216d08dfbbf">
+<img width="1438" alt="Screenshot 2023-06-09 at 13 46 20" src="https://github.com/rawadabu/weClean/assets/73743660/ddda9ca1-683f-4cf0-884a-390da055dea8">
 
 ## ![image](https://github.com/rawadabu/weClean/assets/73743660/9e1e9ecf-4c1a-48fb-a280-7be906f638e0) Sign In
-<img width="1436" alt="Screenshot 2023-06-01 at 13 17 45" src="https://github.com/rawadabu/weClean/assets/73743660/7f6b0ab4-22e5-4603-9adf-7daf8134cda8">
+<img width="1434" alt="Screenshot 2023-06-09 at 13 48 28" src="https://github.com/rawadabu/weClean/assets/73743660/38156ca2-3a63-487d-9ed8-9a3372e1aa9e">
 
-
+## ![image](https://github.com/rawadabu/weClean/assets/73743660/9e1e9ecf-4c1a-48fb-a280-7be906f638e0) Signed user UI
+<img width="1440" alt="Screenshot 2023-06-09 at 13 51 04" src="https://github.com/rawadabu/weClean/assets/73743660/44274a66-6037-423d-b766-55acdfb11c48">
