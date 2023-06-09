@@ -1,0 +1,27 @@
+<div #modal class="modal" [class.hidden]="!isVisible">
+  <h2 class="modal__header">Sign in</h2>
+  <form class="modal__form" (submit)="onSubmit()">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your email"
+      [(ngModel)]="user.email"
+      name="email"
+      required
+    />
+    <label for="password">Password</label>
+    <input
+      type="password"
+      placeholder="Enter your password"
+      id="password"
+      [(ngModel)]="user.password"
+      name="password"
+      required
+    />
+
+    <button type="submit">Sign in</button>
+  </form>
+  <button class="btn--close-modal" (click)="isVisible = false">&times;</button>
+</div>
+<div #overlay class="overlay" [class.hidden]="!isVisible"></div>

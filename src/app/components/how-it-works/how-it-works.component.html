@@ -1,0 +1,80 @@
+<section class="section" id="section--1">
+  <div class="section__title">
+    <h2 class="section__description">How it works</h2>
+    <h3 class="section__header">Get your day back. It's easy</h3>
+  </div>
+
+  <div class="operations">
+    <div class="operations__tab-container">
+      <button
+        class="btn operations__tab operations__tab--1"
+        [ngClass]="{ 'operations__tab--active': activeTab === 1 }"
+        data-tab="1"
+        (click)="selectTab(1)"
+      >
+        <span>01</span>Book your schedule
+      </button>
+      <button
+        class="btn operations__tab operations__tab--2"
+        [ngClass]="{ 'operations__tab--active': activeTab === 2 }"
+        data-tab="2"
+        (click)="selectTab(2)"
+      >
+        <span>02</span>Book a housekeeper
+      </button>
+      <button
+        class="btn operations__tab operations__tab--3"
+        [ngClass]="{ 'operations__tab--active': activeTab === 3 }"
+        data-tab="3"
+        (click)="selectTab(3)"
+      >
+        <span>03</span>Comeback to clean room
+      </button>
+    </div>
+    <div
+      class="operations__content operations__content--1"
+      [ngClass]="{ 'operations__content--active': activeTab === 1 }"
+      *ngIf="activeTab === 1"
+      @fadeAnimation
+    >
+      <div class="operations__icon operations__icon">
+        <img src="assets/calendar.png" alt="Your image description" />
+      </div>
+      <p>Select the days, times and cleaning plans that best suit your life.</p>
+    </div>
+
+    <div
+      class="operations__content operations__content--2"
+      [ngClass]="{ 'operations__content--active': activeTab === 2 }"
+      *ngIf="activeTab === 2"
+      @fadeAnimation
+    >
+      <div class="operations__icon operations__icon--2">
+        <div class="operations__icon operations__icon">
+          <img src="assets/housekeeper.png" alt="Your image description" />
+        </div>
+      </div>
+      <p>
+        Select from a variety of background-checked and experienced housekeepers
+        in your neighborhood.
+      </p>
+    </div>
+    <div
+      class="operations__content operations__content--3"
+      [ngClass]="{ 'operations__content--active': activeTab === 3 }"
+      *ngIf="activeTab === 3"
+      @fadeAnimation
+    >
+      <div class="operations__icon operations__icon--3">
+        <div class="operations__icon operations__icon">
+          <img src="assets/prize.png" alt="Your image description" />
+        </div>
+      </div>
+
+      <p>
+        Enjoy cleanings that keep your home or establishments consistently
+        looking its best.
+      </p>
+    </div>
+  </div>
+</section>
