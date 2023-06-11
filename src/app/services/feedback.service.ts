@@ -1,5 +1,13 @@
 import { Injectable, OnInit } from '@angular/core';
-import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from 'firebase/firestore';
 import { db } from '../../enviroments/enviroment';
 import { User } from '../models/user.model';
 import { Feedback } from '../models/feedback.model';
@@ -30,6 +38,18 @@ export class FeedbackService implements OnInit {
       this.feedbacks.push(feedback);
     });
     return this.feedbacks;
+  }
+
+  async addFeedback(feedback: Feedback): Promise<void> {
+    const feedbacksCol = collection(db, 'feedbacks');
+    await addDoc(feedbacksCol, feedback);
+  }
+
+  async userHasLeftFeedback(userId: string): Promise<boolean> {
+    const feedbacksCol = collection(db, 'feedbacks');
+    const q = query(feedbacksCol, where('userId', '==', userId));
+    const querySnapshot = await getDocs(q);
+    return !querySnapshot.empty;
   }
 
   ngOnInit(): void {}

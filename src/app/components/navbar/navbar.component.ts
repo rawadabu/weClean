@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { FeedbackService } from 'src/app/services/feedback.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit {
   @Output() openModal: EventEmitter<void> = new EventEmitter();
   public isLoggedIn = false;
 
-  constructor() {
+  constructor(private feedbackService: FeedbackService) {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       console.log('Auth state changed. User:', user);
@@ -34,6 +35,10 @@ export class NavbarComponent implements OnInit {
 
   public isModalVisible = false;
   toggleModal(): void {
+    this.openModal.emit();
+  }
+
+  addFeedbackModal(): void {
     this.openModal.emit();
   }
 
