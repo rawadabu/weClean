@@ -30,17 +30,22 @@ export class FeedbackComponent implements OnInit {
     this.feedbacks = await this.feedbackService.getFeedbacks();
   }
   // Implementing slider feature, moving over feedbacks array
+  // Implemented cyclic slider
   currentSlide = 0;
 
   nextSlide(): void {
     if (this.currentSlide < this.feedbacks.length - 1) {
       this.currentSlide++;
+    } else {
+      this.currentSlide = 0; // Back to start
     }
   }
 
   prevSlide(): void {
     if (this.currentSlide > 0) {
       this.currentSlide--;
+    } else {
+      this.currentSlide = this.feedbacks.length - 1; // Go to end
     }
   }
 }
