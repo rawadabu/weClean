@@ -1,4 +1,4 @@
-<div class="modal" [class.hidden]="!isVisible">
+<div class="modal" *ngIf="isVisible">
   <h2 class="modal__header">Sign up</h2>
   <form class="modal__form" (submit)="onSubmit()">
     <label for="firstName">First Name</label>
