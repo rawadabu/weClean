@@ -5,86 +5,25 @@
   </div>
 
   <div class="features">
-    <!-- Move the image box inside the features div -->
     <div class="features__image-box">
-      <div class="image-box__item">
+      <div class="image-box__item" *ngFor="let image of images">
         <div class="image-card">
-          <img src="assets/photo_1.jpeg" alt="Photo 1" class="features__img" />
+          <img [src]="image.src" [alt]="image.alt" class="features__img" />
         </div>
       </div>
-      <div class="image-box__item">
-        <div class="image-card">
-          <img src="assets/photo_2.jpeg" alt="Photo 2" class="features__img" />
-        </div>
-      </div>
-      <div class="image-box__item">
-        <div class="image-card">
-          <img src="assets/photo_3.jpeg" alt="Photo 3" class="features__img" />
-        </div>
-      </div>
-      <div class="image-box__item">
-        <div class="image-card">
-          <img src="assets/photo_4.jpeg" alt="Photo 4" class="features__img" />
-        </div>
-      </div>
-      <div class="image-box__item">
-        <div class="image-card">
-          <img src="assets/photo_5.jpeg" alt="Photo 5" class="features__img" />
-        </div>
-      </div>
-      <div class="image-box__item">
-        <div class="image-card">
-          <img src="assets/photo_6.jpeg" alt="Photo 6" class="features__img" />
-        </div>
-      </div>
-    </div>
-    <div class="features__feature">
-      <span class="pricing">
-        <span> $29 <small>/ d</small> </span>
-      </span>
-      <div class="features__icon">
-        <img src="assets/home-cleaning.png" alt="Home Cleaning" />
-      </div>
-      <h5 class="features__header">Home Cleaning Service</h5>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Leo integer
-        malesuada nunc vel risus commodo viverra maecenas.
-      </p>
-      <button class="btn">Book now</button>
-    </div>
-    <div class="features__feature">
-      <span class="pricing">
-        <span> $49 <small>/ d</small> </span>
-      </span>
-      <div class="features__icon">
-        <img src="assets/business-cleaning.png" alt="Business Cleaning" />
-      </div>
-      <h5 class="features__header">Business Cleaning Service</h5>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Aenean sed
-        adipiscing diam donec adipiscing tristique risus nec. Urna molestie at
-        elementum eu facilisis sed odio.
-      </p>
-      <button class="btn">Book now</button>
     </div>
 
-    <div class="features__feature">
+    <div class="features__feature" *ngFor="let feature of features">
       <span class="pricing">
-        <span> $39 <small>/ d</small> </span>
+        <span>
+          {{ feature.price }} <small>{{ feature.period }}</small>
+        </span>
       </span>
       <div class="features__icon">
-        <img src="assets/other-cleaning.png" alt="Other Cleaning" />
+        <img [src]="feature.icon" [alt]="feature.alt" />
       </div>
-
-      <h5 class="features__header">Other Cleaning Service</h5>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Porttitor rhoncus
-        dolor purus non enim praesent. Morbi tristique senectus et netus. Nisi
-        porta lorem mollis aliquam ut porttitor leo a diam.
-      </p>
+      <h5 class="features__header">{{ feature.header }}</h5>
+      <p>{{ feature.description }}</p>
       <button class="btn">Book now</button>
     </div>
   </div>
