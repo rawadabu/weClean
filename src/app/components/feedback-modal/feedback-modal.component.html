@@ -1,15 +1,14 @@
 <div #modal class="modal" *ngIf="isVisible">
   <h2 class="modal__header">Add Feedback</h2>
   <form class="modal__form">
-    <label for="password">Description</label>
-    <input
-      type="description"
+    <label for="description">Description</label>
+    <textarea
       placeholder="Enter your description"
       id="description"
       [(ngModel)]="user.description"
       name="description"
       required
-    />
+    ></textarea>
 
     <button type="submit">Submit</button>
   </form>

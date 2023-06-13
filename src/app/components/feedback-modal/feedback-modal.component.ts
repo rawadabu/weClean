@@ -8,8 +8,7 @@ import {
 } from '@angular/core';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { User } from 'src/app/models/user.model';
-import { db } from 'src/enviroments/enviroment';
-import { Output, EventEmitter } from '@angular/core';
+import { FeedbackService } from 'src/app/services/feedback.service';
 
 @Component({
   selector: 'app-feedback-modal',
@@ -17,6 +16,8 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrls: ['./feedback-modal.component.css'],
 })
 export class FeedbackModalComponent implements OnInit {
+  constructor(private feedbackService: FeedbackService) {}
+
   ngOnInit(): void {}
   @Input() isVisible = false;
   user: User = {

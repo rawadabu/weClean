@@ -1,0 +1,20 @@
+.modal__form textarea {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  height: 150px;
+  resize: none;
+}
+
+.modal__header::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: #555;
+  font-size: 14px;
+}

@@ -34,6 +34,7 @@ body {
   line-height: 1.9;
   background-color: #f3f3f3;
 }
+
 /* GENERAL ELEMENTS */
 .section {
   padding: 12rem 3rem;
@@ -127,7 +128,7 @@ img {
   filter: blur(20px);
 }
 
-/* MODAL WINDOW FOR BOTH SIGN-UP AND SIGN IN*/
+/* MODAL WINDOW FOR SIGN-UP, SIGN IN AND FEEDBACK*/
 .modal {
   position: fixed;
   top: 50%;
@@ -245,7 +246,7 @@ img {
 
 ::placeholder {
   color: #888;
-  opacity: 1; /* Firefox requires this to make the placeholder visible */
+  opacity: 1;
   font-size: 16px;
   font-style: italic;
   transition: font-size 0.3s ease, color 0.3s ease;
