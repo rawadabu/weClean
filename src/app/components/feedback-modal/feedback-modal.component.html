@@ -1,4 +1,4 @@
-<div #modal class="modal" [class.hidden]="!isVisible">
+<div #modal class="modal" *ngIf="isVisible">
   <h2 class="modal__header">Add Feedback</h2>
   <form class="modal__form">
     <label for="password">Description</label>
@@ -15,4 +15,4 @@
   </form>
   <button class="btn--close-modal" (click)="isVisible = false">&times;</button>
 </div>
-<div #overlay class="overlay" [class.hidden]="!isVisible"></div>
+<div #overlay class="overlay" *ngIf="isVisible"></div>

@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   @Input() isLoggedIn = false;
   isSignupVisible = false;
   isSigninVisible = false;
+  isFeedbackVisible = false;
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
   ngOnInit(): void {
@@ -44,24 +45,37 @@ export class AppComponent implements OnInit {
     } else {
       this.isSignupVisible = false;
       this.isSigninVisible = false;
+      this.isFeedbackVisible = false;
     }
   }
 
   showSignIn() {
     this.isSignupVisible = false;
     this.isSigninVisible = true;
+    this.isFeedbackVisible = false;
   }
 
   showSignUp() {
     this.isSigninVisible = false;
+    this.isFeedbackVisible = false;
     this.isSignupVisible = true;
+  }
+
+  showFeedback() {
+    this.isSigninVisible = false;
+    this.isSignupVisible = false;
+    this.isFeedbackVisible = true;
   }
 
   handleSwitchModal(modal: string) {
     if (modal === 'signup') {
       this.showSignUp();
-    } else {
+    }
+    if (modal === 'signin') {
       this.showSignIn();
+    }
+    if (modal === 'feedback') {
+      this.showFeedback();
     }
   }
 }
