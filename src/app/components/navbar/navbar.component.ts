@@ -10,6 +10,8 @@ import { FeedbackService } from 'src/app/services/feedback.service';
 export class NavbarComponent implements OnInit {
   @Input() featureSelected = new EventEmitter<string>();
   @Output() openModal: EventEmitter<void> = new EventEmitter();
+  @Output() showFeedback: EventEmitter<void> = new EventEmitter<void>();
+
   public isLoggedIn = false;
 
   constructor(private feedbackService: FeedbackService) {
@@ -38,8 +40,8 @@ export class NavbarComponent implements OnInit {
     this.openModal.emit();
   }
 
-  addFeedbackModal(): void {
-    this.openModal.emit();
+  openFeedbackModal() {
+    this.showFeedback.emit();
   }
 
   logOff() {

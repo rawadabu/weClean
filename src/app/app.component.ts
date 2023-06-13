@@ -45,37 +45,28 @@ export class AppComponent implements OnInit {
     } else {
       this.isSignupVisible = false;
       this.isSigninVisible = false;
-      this.isFeedbackVisible = false;
     }
   }
 
   showSignIn() {
     this.isSignupVisible = false;
     this.isSigninVisible = true;
-    this.isFeedbackVisible = false;
   }
 
   showSignUp() {
     this.isSigninVisible = false;
-    this.isFeedbackVisible = false;
     this.isSignupVisible = true;
-  }
-
-  showFeedback() {
-    this.isSigninVisible = false;
-    this.isSignupVisible = false;
-    this.isFeedbackVisible = true;
   }
 
   handleSwitchModal(modal: string) {
     if (modal === 'signup') {
       this.showSignUp();
-    }
-    if (modal === 'signin') {
+    } else {
       this.showSignIn();
     }
-    if (modal === 'feedback') {
-      this.showFeedback();
-    }
+  }
+
+  handleShowFeedbackModal() {
+    this.isFeedbackVisible = true;
   }
 }

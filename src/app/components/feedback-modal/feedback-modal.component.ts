@@ -19,7 +19,6 @@ import { Output, EventEmitter } from '@angular/core';
 export class FeedbackModalComponent implements OnInit {
   ngOnInit(): void {}
   @Input() isVisible = false;
-  @Output() switchModal: EventEmitter<string> = new EventEmitter();
   user: User = {
     firstName: '',
     lastName: '',
