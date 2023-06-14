@@ -1,2 +1,8 @@
-# Stage 1: Build the Angular app
-FROM node:14-alpine as build-
+FROM node:16-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . . 
+EXPOSE 4200
+RUN npm run build
+ENTRYPOINT [ "npm", "start" ]
