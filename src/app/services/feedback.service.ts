@@ -33,7 +33,6 @@ export class FeedbackService implements OnInit {
         id: element['firstname'],
         userId: element['lastname'],
         description: element['description'],
-        // user: <User>userSnapshot.data(),
       };
       this.feedbacks.push(feedback);
     });

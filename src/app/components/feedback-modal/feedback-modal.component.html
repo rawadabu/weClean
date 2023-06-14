@@ -1,6 +1,6 @@
 <div #modal class="modal" *ngIf="isVisible">
   <h2 class="modal__header">Add Feedback</h2>
-  <form class="modal__form">
+  <form class="modal__form" (submit)="onSubmit()">
     <label for="description">Description</label>
     <textarea
       placeholder="Enter your description"
