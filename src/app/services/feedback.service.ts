@@ -29,11 +29,19 @@ export class FeedbackService implements OnInit {
     const feedbackList = feedbackSnapshot.docs.map((doc) => doc.data());
 
     feedbackList.map((element) => {
+      let user: User = {
+        firstName: element['user']?.firstName || '',
+        lastName: element['user']?.lastName || '',
+        email: element['user']?.email || '',
+        password: element['user']?.password || '',
+        description: element['user']?.description || '',
+        profilePicture: element['user']?.profilePicture || '',
+      };
+
       let feedback: Feedback = {
-        id: element['firstname'],
-        userId: element['lastname'],
+        id: element['id'],
+        user: user,
         description: element['description'],
-        // user: <User>userSnapshot.data(),
       };
       this.feedbacks.push(feedback);
     });
@@ -45,12 +53,14 @@ export class FeedbackService implements OnInit {
     await addDoc(feedbacksCol, feedback);
   }
 
-  async userHasLeftFeedback(userId: string): Promise<boolean> {
+  async userHasLeftFeedback(user: User): Promise<boolean> {
     const feedbacksCol = collection(db, 'feedbacks');
-    const q = query(feedbacksCol, where('userId', '==', userId));
+    const q = query(
+      feedbacksCol,
+      where('user.email', '==', user.email) // Modify the check based on a unique identifier
+    );
     const querySnapshot = await getDocs(q);
     return !querySnapshot.empty;
   }
-
   ngOnInit(): void {}
 }
