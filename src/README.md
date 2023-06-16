@@ -18,8 +18,10 @@
 ### ![image](https://github.com/rawadabu/weClean/assets/73743660/4c3ad2ed-f077-49a3-8af3-fcfabe946455) Services hover with gradient border and pop-out rounded border prices section
 <img width="1431" alt="Screenshot 2023-06-01 at 13 17 21" src="https://github.com/rawadabu/weClean/assets/73743660/f5f166a0-0364-47ac-9fdf-92c2db55c162">
 
-## ![image](https://github.com/rawadabu/weClean/assets/73743660/44e7ca58-5c16-4ab6-9b68-70a8f8c5ddf5) Feedback
-Not finished yet.
+## ![image](https://github.com/rawadabu/weClean/assets/73743660/44e7ca58-5c16-4ab6-9b68-70a8f8c5ddf5) Feedback [Slider]
+<img width="1433" alt="Screenshot 2023-06-16 at 22 34 06" src="https://github.com/rawadabu/weClean/assets/73743660/08cb63c1-768a-46b3-8a0a-6be305cb7d1c">
+### Add Feedback [Only for signed users]
+<img width="1439" alt="Screenshot 2023-06-16 at 22 37 00" src="https://github.com/rawadabu/weClean/assets/73743660/025f6545-39a0-43ef-8fee-b7ad93b062ef">
 
 ## ![image](https://github.com/rawadabu/weClean/assets/73743660/e4ca24fb-51cc-44ca-aeb7-d452eef93005) Contact-us
 <img width="1435" alt="Screenshot 2023-06-01 at 13 17 34" src="https://github.com/rawadabu/weClean/assets/73743660/717d8b29-589c-4f6d-b5f4-d95459752cf9">
