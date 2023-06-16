@@ -1,10 +1,26 @@
 <div #modal class="modal" *ngIf="isVisible">
   <h2 class="modal__header">Add Feedback</h2>
   <form class="modal__form" (submit)="onSubmit()">
+    <label for="firstname">First Name</label>
+    <textarea
+      placeholder="Add lastName"
+      id="firstName"
+      [(ngModel)]="user.firstName"
+      name="firstName"
+      required
+    ></textarea>
+    <label for="lastname">Last Name</label>
+    <textarea
+      placeholder="Add lastName"
+      id="lastName"
+      [(ngModel)]="user.lastName"
+      name="lastName"
+      required
+    ></textarea>
     <label for="description">Description</label>
     <textarea
-      placeholder="Enter your description"
-      id="description"
+      placeholder="Add Description"
+      class="description"
       [(ngModel)]="user.description"
       name="description"
       required

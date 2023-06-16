@@ -16,12 +16,16 @@
           {{ feedback.description }}
         </blockquote>
         <address class="testimonial__author">
-          <img [src]="user.profilePicture" alt="" class="testimonial__photo" />
+          <img
+            [src]="feedback.user.profilePicture"
+            alt=""
+            class="testimonial__photo"
+          />
           <h6 class="testimonial__firstName">
-            {{ feedback.id }}
+            {{ feedback.user.firstName }}
           </h6>
           <p class="testimonial__lastName">
-            {{ feedback.userId }}
+            {{ feedback.user.lastName }}
           </p>
         </address>
       </div>

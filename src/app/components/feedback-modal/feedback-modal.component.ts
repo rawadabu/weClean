@@ -37,21 +37,21 @@ export class FeedbackModalComponent implements OnInit {
 
   onSubmit() {
     if (this.user.description) {
-      const feedback: Feedback = {
-        id: this.user.firstName,
-        userId: this.user.lastName, // Set the user ID if required
-        description: this.user.description,
-      };
-
       // Check if the user has already left feedback
       this.feedbackService
-        .userHasLeftFeedback(feedback.userId!)
+        .userHasLeftFeedback(this.user)
         .then((hasLeftFeedback) => {
           if (hasLeftFeedback) {
             // User has already left feedback
             alert('You have already left feedback.');
           } else {
             // User has not left feedback, proceed to add feedback
+            const feedback: Feedback = {
+              id: '',
+              user: this.user,
+              description: this.user.description,
+            };
+
             this.feedbackService
               .addFeedback(feedback)
               .then(() => {
