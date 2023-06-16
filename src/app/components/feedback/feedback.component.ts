@@ -11,15 +11,7 @@ import { Feedback } from '../../models/feedback.model';
 })
 export class FeedbackComponent implements OnInit {
   feedbacks: Feedback[] = [];
-  user: User = {
-    firstName: 'Rawad',
-    lastName: 'Abusaleh',
-    email: 'rawad@gmail.com',
-    password: 'Hello',
-    description: 'Best financial decision ever!!',
-    profilePicture:
-      'https://images.squarespace-cdn.com/content/v1/5e6ece70bd2f8a6de8472818/714f685e-d0ba-40f9-8bb2-38722c1fd29c/Tiny+Avatar.png?format=1000w',
-  };
+
   constructor(private feedbackService: FeedbackService) {}
 
   ngOnInit(): void {
