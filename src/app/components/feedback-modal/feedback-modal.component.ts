@@ -47,7 +47,6 @@ export class FeedbackModalComponent implements OnInit {
           } else {
             // User has not left feedback, proceed to add feedback
             const feedback: Feedback = {
-              id: '',
               user: this.user,
               description: this.user.description,
             };

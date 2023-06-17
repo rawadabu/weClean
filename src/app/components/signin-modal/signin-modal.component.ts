@@ -44,7 +44,7 @@ export class SigninModalComponent implements OnInit {
   onSubmit() {
     const auth = getAuth();
 
-    signInWithEmailAndPassword(auth, this.user.email, 'password')
+    signInWithEmailAndPassword(auth, this.user.email, this.user.password)
       .then((userCredential) => {
         // The user was authenticated successfully
         const user = userCredential.user;

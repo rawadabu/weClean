@@ -1,11 +1,12 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
-  OnInit,
-  ViewChild,
-  Input,
-  Output,
   EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
 } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
@@ -17,15 +18,10 @@ import { db } from 'src/enviroments/enviroment';
   templateUrl: './signup-modal.component.html',
   styleUrls: ['./signup-modal.component.css'],
 })
-export class SignupModalComponent implements OnInit {
+export class SignupModalComponent implements OnInit, AfterViewInit {
   @Input() isVisible = false;
-  @Output() switchModal: EventEmitter<string> = new EventEmitter();
 
-  ngOnInit(): void {
-    // Add any initialization logic here
-  }
-  @ViewChild('modal', { static: false }) modal!: ElementRef<any>;
-  @ViewChild('overlay', { static: false }) overlay!: ElementRef<any>;
+  @Output() switchModal: EventEmitter<string> = new EventEmitter();
 
   user: User = {
     firstName: '',
@@ -34,20 +30,44 @@ export class SignupModalComponent implements OnInit {
     password: '',
   };
 
+  @ViewChild('modal') modal!: ElementRef<any>;
+  @ViewChild('overlay') overlay!: ElementRef<any>;
+
+  ngOnInit(): void {
+    // Add any initialization logic here
+  }
+
+  ngAfterViewInit(): void {
+    this.openModal();
+  }
+
   openModal() {
-    this.modal.nativeElement.classList.remove('hidden');
-    this.overlay.nativeElement.classList.remove('hidden');
+    if (this.modal && this.overlay) {
+      this.modal.nativeElement.classList.remove('hidden');
+      this.overlay.nativeElement.classList.remove('hidden');
+    }
   }
 
   closeModal() {
-    this.modal.nativeElement.classList.add('hidden');
-    this.overlay.nativeElement.classList.add('hidden');
+    if (this.modal && this.overlay) {
+      this.modal.nativeElement.classList.add('fade-out');
+      this.overlay.nativeElement.classList.add('fade-out');
+
+      setTimeout(() => {
+        this.modal.nativeElement.classList.add('hidden');
+        this.overlay.nativeElement.classList.add('hidden');
+
+        // Reset the fade-out classes for future use
+        this.modal.nativeElement.classList.remove('fade-out');
+        this.overlay.nativeElement.classList.remove('fade-out');
+      }, 600); // Adjust the timeout value to match your CSS transition duration
+    }
   }
 
   onSubmit() {
     const auth = getAuth();
 
-    createUserWithEmailAndPassword(auth, this.user.email, 'password')
+    createUserWithEmailAndPassword(auth, this.user.email, this.user.password)
       .then(async (userCredential) => {
         // The user account was created successfully
         const user = userCredential.user;
@@ -73,7 +93,7 @@ export class SignupModalComponent implements OnInit {
         };
 
         // Close the modal
-        this.closeModal();
+        this.isVisible = false; // Set isVisible to false
       })
       .catch((error) => {
         const errorCode = error.code;

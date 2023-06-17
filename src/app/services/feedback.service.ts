@@ -37,9 +37,9 @@ export class FeedbackService implements OnInit {
         description: element['user']?.description || '',
         profilePicture: element['user']?.profilePicture || '',
       };
+      console.log('User email:', user);
 
       let feedback: Feedback = {
-        id: element['id'],
         user: user,
         description: element['description'],
       };
@@ -57,8 +57,9 @@ export class FeedbackService implements OnInit {
     const feedbacksCol = collection(db, 'feedbacks');
     const q = query(
       feedbacksCol,
-      where('user.email', '==', user.email) // Modify the check based on a unique identifier
+      where('feedback.user.email', '==', user.email)
     );
+    console.log(user); // berj3 empty mail and pw
     const querySnapshot = await getDocs(q);
     return !querySnapshot.empty;
   }
