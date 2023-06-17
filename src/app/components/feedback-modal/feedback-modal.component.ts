@@ -39,7 +39,7 @@ export class FeedbackModalComponent implements OnInit {
     if (this.user.description) {
       // Check if the user has already left feedback
       this.feedbackService
-        .userHasLeftFeedback(this.user)
+        .userHasLeftFeedback()
         .then((hasLeftFeedback) => {
           if (hasLeftFeedback) {
             // User has already left feedback
@@ -52,7 +52,7 @@ export class FeedbackModalComponent implements OnInit {
             };
 
             this.feedbackService
-              .addFeedback(this.user)
+              .addFeedback(feedback)
               .then(() => {
                 // Feedback added successfully
                 alert('Feedback added successfully.');

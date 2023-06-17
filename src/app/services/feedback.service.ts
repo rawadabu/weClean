@@ -1,21 +1,30 @@
 import { Injectable, OnInit } from '@angular/core';
-import { getAuth } from 'firebase/auth';
-import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from 'firebase/firestore';
 import { db } from '../../enviroments/enviroment';
-import { Feedback } from '../models/feedback.model';
 import { User } from '../models/user.model';
+import { Feedback } from '../models/feedback.model';
+import { getAuth } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root',
 })
-export class FeedbackService {
+export class FeedbackService implements OnInit {
   feedbacks!: Feedback[];
+
   constructor() {}
 
   async getFeedbacks() {
     this.feedbacks = [];
 
-    // Get feedbacks data
+    // get feedbacks data
     const feedbacksCol = collection(db, 'feedbacks');
     const feedbackSnapshot = await getDocs(feedbacksCol);
     const feedbackList = feedbackSnapshot.docs.map((doc) => doc.data());
@@ -29,17 +38,18 @@ export class FeedbackService {
         description: element['user']?.description || '',
         profilePicture: element['user']?.profilePicture || '',
       };
+      console.log('User email:', user.email);
+
       let feedback: Feedback = {
         user: user,
-        description: element['user']?.description || '',
+        description: element['description'],
       };
       this.feedbacks.push(feedback);
     });
-
     return this.feedbacks;
   }
 
-  async addFeedback(user: User): Promise<void> {
+  async addFeedback(feedback: Feedback): Promise<void> {
     const auth = getAuth();
     const currentUser = auth.currentUser;
 
@@ -47,15 +57,16 @@ export class FeedbackService {
       const obj = {
         email: currentUser.email || '',
         user: {
-          firstName: user.firstName,
-          lastName: user.lastName,
-          description: user.description,
+          firstName: feedback.user.firstName,
+          lastName: feedback.user.lastName,
+          description: feedback.user.description,
+          email: currentUser.email,
         },
       };
 
       const feedbackData = {
         user: obj.user,
-        description: obj.user.description,
+        description: feedback.description,
       };
 
       const feedbacksCol = collection(db, 'feedbacks');
@@ -65,7 +76,7 @@ export class FeedbackService {
     }
   }
 
-  async userHasLeftFeedback(user: User): Promise<boolean> {
+  async userHasLeftFeedback(): Promise<boolean> {
     const auth = getAuth();
     const currentUser = auth.currentUser;
 
@@ -81,4 +92,5 @@ export class FeedbackService {
       throw new Error('User is not authenticated.');
     }
   }
+  ngOnInit(): void {}
 }
