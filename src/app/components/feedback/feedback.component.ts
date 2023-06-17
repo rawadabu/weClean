@@ -21,6 +21,7 @@ export class FeedbackComponent implements OnInit {
   async loadFeedbacks(): Promise<void> {
     this.feedbacks = await this.feedbackService.getFeedbacks();
   }
+
   // Implementing slider feature, moving over feedbacks array
   // Implemented cyclic slider
   currentSlide = 0;

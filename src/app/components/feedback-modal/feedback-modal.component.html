@@ -3,9 +3,9 @@
   <form class="modal__form" (submit)="onSubmit()">
     <label for="firstname">First Name</label>
     <textarea
-      placeholder="Add lastName"
+      placeholder="Add firstName"
       id="firstName"
-      [(ngModel)]="user.firstName"
+      [(ngModel)]="this.user.firstName"
       name="firstName"
       required
     ></textarea>
@@ -13,7 +13,7 @@
     <textarea
       placeholder="Add lastName"
       id="lastName"
-      [(ngModel)]="user.lastName"
+      [(ngModel)]="this.user.lastName"
       name="lastName"
       required
     ></textarea>
@@ -21,7 +21,7 @@
     <textarea
       placeholder="Add Description"
       class="description"
-      [(ngModel)]="user.description"
+      [(ngModel)]="this.user.description"
       name="description"
       required
     ></textarea>

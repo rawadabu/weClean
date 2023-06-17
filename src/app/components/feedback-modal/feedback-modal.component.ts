@@ -52,7 +52,7 @@ export class FeedbackModalComponent implements OnInit {
             };
 
             this.feedbackService
-              .addFeedback(feedback)
+              .addFeedback(this.user)
               .then(() => {
                 // Feedback added successfully
                 alert('Feedback added successfully.');
