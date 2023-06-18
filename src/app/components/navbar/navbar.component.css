@@ -1,7 +1,6 @@
 /* NAVIGATION */
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 6rem;
   width: 100%;
@@ -16,7 +15,9 @@
 
 .nav__name {
   font-family: monospace;
-  font-size: 4rem;
+  font-size: 4em;
+  display: inline-block;
+  justify-self: flex-start;
 }
 
 a {
@@ -32,10 +33,11 @@ a {
   display: flex;
   align-items: center;
   list-style: none;
+  margin-left: auto;
 }
 
 .nav__item {
-  margin-left: 6rem;
+  margin-left: 2rem;
 }
 
 .nav__link:link,
