@@ -18,4 +18,4 @@ run `docker build -t <image-name> .  `
 run `docker run -p 4200:4200 <image-name>`
 
 ### Project Short Video
-https://youtu.be/Q7aPJyXxP6Q
+[![Watch the video]](https://youtu.be/Q7aPJyXxP6Q)
