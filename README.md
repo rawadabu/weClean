@@ -16,3 +16,6 @@ run `docker build -t <image-name> .  `
 ### To run the Image
 
 run `docker run -p 4200:4200 <image-name>`
+
+### Project Short Video
+[Watch the video](https://youtu.be/Q7aPJyXxP6Q)
