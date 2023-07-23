@@ -8,16 +8,15 @@ describe('SigninModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SigninModalComponent ]
-    })
-    .compileComponents();
+      declarations: [SigninModalComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SigninModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the SigninModalComponent', () => {
     expect(component).toBeTruthy();
   });
 });

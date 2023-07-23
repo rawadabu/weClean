@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HowItWorks } from './components/how-it-works/how-it-works.component';
-import { ServicesComponent } from './components/services/services.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
+import { ServicesComponent } from './components/my-services/services.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { contactusComponent } from './components/contact-us/contact-us.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -21,7 +22,7 @@ import { FeedbackModalComponent } from './components/feedback-modal/feedback-mod
   declarations: [
     AppComponent,
     HeaderComponent,
-    HowItWorks,
+    HowItWorksComponent,
     ServicesComponent,
     FeedbackComponent,
     contactusComponent,
@@ -34,6 +35,7 @@ import { FeedbackModalComponent } from './components/feedback-modal/feedback-mod
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NoopAnimationsModule,
     FormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),

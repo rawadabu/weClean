@@ -21,7 +21,7 @@ import {
     ]),
   ],
 })
-export class HowItWorks implements OnInit {
+export class HowItWorksComponent implements OnInit {
   ngOnInit(): void {}
 
   activeTab = 1; // Default is the first tab
