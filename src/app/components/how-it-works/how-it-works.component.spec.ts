@@ -16,7 +16,7 @@ describe('HowItWorksComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create the HowItWorksComponent', () => {
     expect(component).toBeTruthy();
   });
 });
